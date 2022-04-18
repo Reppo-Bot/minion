@@ -4,7 +4,7 @@ import sys
 import requests as r
 
 def default(ctx):
-    res = r.post("http://bot.localhost:8080/command/callCommand", json=ctx)
+    res = r.post("http://bot.localhost:8080/callCommand", json=ctx)
     _res = res.json()
     if("failed" in _res):
         print(f"Failed command, responding with {_res['failed']}")
